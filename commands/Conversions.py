@@ -36,7 +36,7 @@ def replace_with_timestamp(match, tz):
     date_string = match.group(1)
     try:
         timestamp = convert_to_unix_timestamp(date_string, tz)
-        return f"<t:{timestamp}>"
+        return f"<t:{timestamp}:t>"
     except Exception as e:
         # If conversion fails, return the original string or an error marker.
         return match.group(0)
